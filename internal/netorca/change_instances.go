@@ -8,7 +8,6 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"reflect"
 )
 
 type ChangeInstance struct {
@@ -298,19 +297,6 @@ func NewChangeInstanceQuery(args map[string]interface{}) (*ChangeInstanceQuery, 
 	}
 
 	return &c, nil
-}
-
-// Small helper function to check if all of the non-mandatory fields are zero values.
-func isChangeInstanceQueryZeroValue(s ChangeInstanceQuery) bool {
-	v := reflect.ValueOf(s)
-	for i := 0; i < v.NumField(); i++ {
-		field := v.Field(i)
-		// First field (index 0) is POV which is a mandatory field.
-		if i != 0 && !field.IsZero() {
-			return false
-		}
-	}
-	return true
 }
 
 // Returns the formatted query parmaters for use with the http client.

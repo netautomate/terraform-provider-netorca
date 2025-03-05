@@ -40,7 +40,10 @@ func TestChangeInstanceGetById(t *testing.T) {
 	// mock response from server
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
-		w.Write(mockResponse)
+		_, err = w.Write(mockResponse)
+		if err != nil {
+			t.Fatalf("Failed to write mock response: %v", err)
+		}
 	}))
 	defer server.Close()
 
@@ -75,7 +78,10 @@ func TestChangeInstanceGetByIdNotFound(t *testing.T) {
 	// mock response from server
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusNotFound)
-		w.Write(mockResponse)
+		_, err := w.Write(mockResponse)
+		if err != nil {
+			t.Fatalf("Failed to write mock response")
+		}
 
 	}))
 	defer server.Close()
@@ -106,7 +112,11 @@ func TestServiceItemGetList(t *testing.T) {
 
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
-		w.Write(mockResponse)
+		_, err = w.Write(mockResponse)
+		if err != nil {
+			t.Fatalf("Failed to write mock response: %v", err)
+		}
+
 	}))
 	defer server.Close()
 

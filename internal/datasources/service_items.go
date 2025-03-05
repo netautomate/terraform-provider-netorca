@@ -309,35 +309,18 @@ func getTerraformServiceItems(serviceItems []netorca.ServiceItem, resp *datasour
 		serviceItemServiceObjVal, serviceItemServiceDiags := types.ObjectValue(serviceItemServiceAttrType, serviceItemServiceObj)
 		diags.Append(serviceItemServiceDiags...)
 
-		consumerTeamMetadata, err := json.Marshal(v.ConsumerTeam.Metadata)
-		if err != nil {
-			resp.Diagnostics.AddError(fmt.Sprintln("Error Marshalling service_item.deployed_item.consumer_team.metadata"), err.Error())
-			return types.ListNull(elemType), err
-		}
-
-		serviceItemConsumerTeamObj := map[string]attr.Value{
-			"id":       types.Int64Value(int64(v.ConsumerTeam.Id)),
-			"name":     types.StringValue(v.ConsumerTeam.Name),
-			"metadata": types.StringValue(string(consumerTeamMetadata)),
-		}
-
-		serviceItemServiceOwnerTeamObj := map[string]attr.Value{
-			"id":   types.Int64Value(int64(v.ServiceOwnerTeam.Id)),
-			"name": types.StringValue(v.ServiceOwnerTeam.Name),
-		}
-
 		deployedItemData, err := json.Marshal(v.DeployedItem)
 		if err != nil {
 			resp.Diagnostics.AddError(fmt.Sprintln("Error Marshalling service_item.deployed_item.data"), err.Error())
 			return types.ListNull(elemType), err
 		}
 
-		consumerTeamMetadata, err = json.Marshal(v.ConsumerTeam.Metadata)
+		consumerTeamMetadata, err := json.Marshal(v.ConsumerTeam.Metadata)
 		if err != nil {
 			resp.Diagnostics.AddError(fmt.Sprintln("Error Marshalling service_item.consumer_team.metadata"), err.Error())
 			return types.ListNull(elemType), err
 		}
-		serviceItemConsumerTeamObj = map[string]attr.Value{
+		serviceItemConsumerTeamObj := map[string]attr.Value{
 			"id":       types.Int64Value(int64(v.ConsumerTeam.Id)),
 			"name":     types.StringValue(v.ConsumerTeam.Name),
 			"metadata": types.StringValue(string(consumerTeamMetadata)),
@@ -345,7 +328,7 @@ func getTerraformServiceItems(serviceItems []netorca.ServiceItem, resp *datasour
 		serviceItemConsumerTeamObjVal, serviceItemConsumerTeamDiags := types.ObjectValue(serviceItemConsumerTeamAttrTypes, serviceItemConsumerTeamObj)
 		diags.Append(serviceItemConsumerTeamDiags...)
 
-		serviceItemServiceOwnerTeamObj = map[string]attr.Value{
+		serviceItemServiceOwnerTeamObj := map[string]attr.Value{
 			"id":   types.Int64Value(int64(v.ServiceOwnerTeam.Id)),
 			"name": types.StringValue(v.ServiceOwnerTeam.Name),
 		}
