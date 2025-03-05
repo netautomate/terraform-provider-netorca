@@ -1,0 +1,10 @@
+*vault*
+*.backup
+*.tfstate
+*.tfvars.json
+.terraform
+*.lock.hcl
+venv
+*.jnl
+*service_items.json
+.idea/

@@ -1,0 +1,184 @@
+{
+    "count": 3,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 32,
+            "url": "http://api-aws.demo.netorca.io/v1/orcabase/serviceowner/service_items/32/",
+            "name": "django-app6",
+            "created": "2025-02-28T13:18:31.688461Z",
+            "modified": "2025-02-28T13:19:02.834433Z",
+            "runtime_state": "IN_SERVICE",
+            "service": {
+                "id": 4,
+                "name": "THREE_TIER_APPLICATION",
+                "owner": {
+                    "id": 4,
+                    "name": "AWS"
+                },
+                "state": "IN_SERVICE",
+                "healthcheck": false
+            },
+            "application": {
+                "id": 20,
+                "name": "app6",
+                "metadata": {
+                    "owner": "team@example.com",
+                    "description": "My Django application",
+                    "environment": "DEV"
+                },
+                "owner": 1
+            },
+            "related": null,
+            "service_owner_team": {
+                "id": 4,
+                "name": "AWS"
+            },
+            "consumer_team": {
+                "id": 1,
+                "name": "alpha",
+                "metadata": {
+                    "team_name": "alpha"
+                }
+            },
+            "change_state": "ALL_CHANGES_COMPLETED",
+            "deployed_item": {
+                "data": {
+                    "data": "netorca terraform"
+                },
+                "version": 1
+            },
+            "declaration": {
+                "name": "django-app6",
+                "size": "small",
+                "image": "ami-02141377eee7defb9",
+                "owner": "alpha1235@t1est.com",
+                "description": "Django app for alpha",
+                "environment": "dev"
+            },
+            "healthcheck_status": null,
+            "is_validated_minimum_schema": false,
+            "is_deprecated_service_schema": false,
+            "is_service_private": false
+        },
+        {
+            "id": 31,
+            "url": "http://api-aws.demo.netorca.io/v1/orcabase/serviceowner/service_items/31/",
+            "name": "django-app7",
+            "created": "2025-02-28T13:18:31.651206Z",
+            "modified": "2025-02-28T14:00:28.094508Z",
+            "runtime_state": "IN_SERVICE",
+            "service": {
+                "id": 4,
+                "name": "THREE_TIER_APPLICATION",
+                "owner": {
+                    "id": 4,
+                    "name": "AWS"
+                },
+                "state": "IN_SERVICE",
+                "healthcheck": false
+            },
+            "application": {
+                "id": 19,
+                "name": "app7",
+                "metadata": {
+                    "owner": "team@example.com",
+                    "description": "My app7",
+                    "environment": "DEV"
+                },
+                "owner": 1
+            },
+            "related": null,
+            "service_owner_team": {
+                "id": 4,
+                "name": "AWS"
+            },
+            "consumer_team": {
+                "id": 1,
+                "name": "alpha",
+                "metadata": {
+                    "team_name": "alpha"
+                }
+            },
+            "change_state": "ALL_CHANGES_COMPLETED",
+            "deployed_item": {
+                "data": {
+                    "data": "netorca terraform"
+                },
+                "version": 1
+            },
+            "declaration": {
+                "name": "django-app7",
+                "size": "small",
+                "image": "ami-02141377eee7defb9",
+                "owner": "app7@test.com",
+                "description": "Django app for alpha",
+                "environment": "dev"
+            },
+            "healthcheck_status": null,
+            "is_validated_minimum_schema": false,
+            "is_deprecated_service_schema": false,
+            "is_service_private": false
+        },
+        {
+            "id": 30,
+            "url": "http://api-aws.demo.netorca.io/v1/orcabase/serviceowner/service_items/30/",
+            "name": "django-app8",
+            "created": "2025-02-28T13:18:31.639621Z",
+            "modified": "2025-02-28T14:09:15.475308Z",
+            "runtime_state": "IN_SERVICE",
+            "service": {
+                "id": 4,
+                "name": "THREE_TIER_APPLICATION",
+                "owner": {
+                    "id": 4,
+                    "name": "AWS"
+                },
+                "state": "IN_SERVICE",
+                "healthcheck": false
+            },
+            "application": {
+                "id": 18,
+                "name": "app8",
+                "metadata": {
+                    "owner": "team@example.com",
+                    "description": "My app8",
+                    "environment": "DEV"
+                },
+                "owner": 1
+            },
+            "related": null,
+            "service_owner_team": {
+                "id": 4,
+                "name": "AWS"
+            },
+            "consumer_team": {
+                "id": 1,
+                "name": "alpha",
+                "metadata": {
+                    "team_name": "alpha"
+                }
+            },
+            "change_state": "ALL_CHANGES_COMPLETED",
+            "deployed_item": {
+                "data": {
+                    "data": "netorca terraforsm"
+                },
+                "version": 2
+            },
+            "declaration": {
+                "name": "django-app8",
+                "size": "small",
+                "image": "ami-021413772eee7defb9",
+                "owner": "app8@test.com",
+                "description": "Django app for alpha",
+                "environment": "dev"
+            },
+            "healthcheck_status": null,
+            "is_validated_minimum_schema": false,
+            "is_deprecated_service_schema": false,
+            "is_service_private": false
+        }
+    ]
+}
