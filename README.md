@@ -5,9 +5,9 @@ See more in [Netorca Docs](https://netautomate.gitlab.io/netorca_docs/) and [Con
 
 ## Prerequisites
 
-- [Go 1.21+](https://golang.org/dl/)
+- [Go 1.22+](https://golang.org/dl/)
 - [Make](https://www.gnu.org/software/make/)
-- Terraform (to use this provider)
+- Terraform 
 
 ## Installation
 Clone the repository and use the provided Makefile targets to build and install the provider:
